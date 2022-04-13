@@ -6,7 +6,7 @@ import Announcements from './Navigation/Announcements.jsx';
 import ProductOverview from './Overview/ProductOverview.jsx';
 import RelatedProducts from './RelatedProducts/RelatedProducts.jsx';
 import QuestionAndAnswers from './QuestionsAndAnswers/QuestionAndAnswers.jsx';
-import RatingsAndReviews from './RatingsAndReviews/RatingsReviews.jsx';
+import RatingsAndReviews from './RatingsandReviews/RatingsReviews.jsx';
 
 import { useInView } from 'react-intersection-observer';
 import useLocalStorage from "use-local-storage";
