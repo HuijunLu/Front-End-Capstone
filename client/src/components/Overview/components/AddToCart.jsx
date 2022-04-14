@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { BsStar, BsStarFill } from "react-icons/bs";
 import QuantityOptions from './QuantityOptions.jsx'
 
 const AddToCart = ({ data, stylesIndex, handleCartData }) => {
@@ -9,8 +8,16 @@ const AddToCart = ({ data, stylesIndex, handleCartData }) => {
   const [purchaseDisabled, setPurchaseDisabled] = useState(true);
   const [star, setStar] = useState(0);
   const [addToBag, setAddToBag] = useState('ADD TO BAG');
-  // const [bagData, setBagData] = useState([]);
 
+  // add useEffect
+
+ useEffect(() => {
+  setSizeSelection('');
+  setQuantitySelection(1);
+  setQuantityOption('');
+  setPurchaseDisabled(true);
+  setAddToBag('ADD TO BAG');
+ }, [data.product_id])
 
   /* Managing duplicated data from API */
   let skusData = Object.values(data.results[stylesIndex].skus);
@@ -43,10 +50,10 @@ const AddToCart = ({ data, stylesIndex, handleCartData }) => {
       product_id: data.product_id,
       quantity: quantitySelection,
       size: sizeSelection,
-      sku: 111,
       style_id: data.results[stylesIndex].style_id,
       photo_url: data.results[stylesIndex].photos[0].url
     }
+
     handleCartData(cartObj)
     changeText('Item added !');
   }
@@ -57,17 +64,6 @@ const AddToCart = ({ data, stylesIndex, handleCartData }) => {
       setAddToBag('ADD TO BAG')
     }, [1000])
   }
-
-  const toggleStar = (e) => {
-    e.preventDefault();
-    if (star === 0) {
-      setStar(1);
-    } else {
-      setStar(0);
-    }
-  }
-
-
 
   return (
     <div>
@@ -89,16 +85,11 @@ const AddToCart = ({ data, stylesIndex, handleCartData }) => {
           <QuantityOptions quantityOption={quantityOption} />
         </select>
 
-        <input type="submit" id="add-to-bag" disabled={sizeSelection === null ? true : false} value={addToBag}
+        <input type="submit" id="add-to-bag"
+          disabled={sizeSelection === '' ? true : false}
+          value={addToBag}
           onClick={handleSubmitCart}
         />
-
-        {/* <button className={star === 0 ? "starred" : "starred hidden"} onClick={toggleStar}>
-          <BsStar />
-        </button>
-        <button className={star === 1 ? "starred" : "starred hidden"} onClick={toggleStar}>
-          <BsStarFill />
-        </button> */}
       </form>
     </div>
   )

@@ -19,6 +19,7 @@ const QuestionAndAnswers = ({ product_id, setQuestionLength}) => {
   const [collapseQuestions, setCollapseQuestions] = useState(true)
 
 
+
   const handleSearch = (term) => {
     if (term.length > 2) {
       let filteredQuestions = questionList.filter(
@@ -53,6 +54,8 @@ const QuestionAndAnswers = ({ product_id, setQuestionLength}) => {
         setQuestionList(sortedQuestions);
         setFilteredQuestions(sortedQuestions);
         setQuestionLength(res.data.results.length)
+        setCollapseQuestions(true);
+        setQuestionNumber(4);
       })
       .catch(err => {
         console.log("err in getting questions per id:", err)
@@ -73,7 +76,7 @@ const QuestionAndAnswers = ({ product_id, setQuestionLength}) => {
       <br></br>
 
       <div className='QABtn'>
-        {filteredQuestions.length > 2  && collapseQuestions ?
+        {filteredQuestions.length > 4  && collapseQuestions ?
           <button className='moreQBtn' onClick={showMoreQuestion} >MORE ANSWERED QUESTIONS</button> : null}
         {!collapseQuestions ?
           <button className='goBackQ' onClick = {closeQuestions}>GO BACK</button> : null}
