@@ -151,13 +151,10 @@ body {
   margin-top: 0px;
 }
 
-
-
 /* ------------------------- Buttons ------------------------- */
 
 #morereviews, #addreview {
   align-items: center;
-  justify-content: center;
   background-color: var(--button-color);
   border: 2.5px solid var(--button-color);
   border-radius: 8px;
