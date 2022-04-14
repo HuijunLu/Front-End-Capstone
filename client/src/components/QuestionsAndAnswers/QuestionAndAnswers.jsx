@@ -77,7 +77,7 @@ const QuestionAndAnswers = ({ product_id, setQuestionLength}) => {
 
       <div className='QABtn'>
         {filteredQuestions.length > 4  && collapseQuestions ?
-          <button className='moreQBtn' onClick={showMoreQuestion} >MORE ANSWERED QUESTIONS</button> : null}
+          <button data-testid = 'moreQBtn' className='moreQBtn' onClick={showMoreQuestion} >MORE ANSWERED QUESTIONS</button> : null}
         {!collapseQuestions ?
           <button className='goBackQ' onClick = {closeQuestions}>GO BACK</button> : null}
         <button className='addQBtn' onClick={handleOpenModel} >ADD A QUESTION</button>
