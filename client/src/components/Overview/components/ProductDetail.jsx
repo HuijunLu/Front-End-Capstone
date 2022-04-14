@@ -1,5 +1,5 @@
 import React from 'react';
-import Star from '../../SharedComponents/Star.jsx';
+import Star from '../../SharedComponents/star.jsx';
 
 const ProductDetail = ({ data, stylesIndex, avgReviewRating }) => {
   if (data.length === 0) {
