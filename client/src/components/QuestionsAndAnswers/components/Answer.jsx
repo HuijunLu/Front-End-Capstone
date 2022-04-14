@@ -60,7 +60,7 @@ const Answer = ({ answer }) => {
         <span className='QAhelpful'>Helpful? </span>
         {!helpfulClicked?
         <a className='QAhelpful-button' onClick = {handleClickHelpful}>Yes ({answerHelpful})</a>
-        : <a>Yes ({answerHelpful})</a>}
+        : <a style={{margin : '5px'}}>Yes ({answerHelpful})</a>}
         <span className='QAbreak'>|</span>
         {!reportClicked?
           <a className='QAreport-button' onClick = {handleClickReport}>Report</a>

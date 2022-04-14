@@ -9,6 +9,16 @@ const AddToCart = ({ data, stylesIndex, handleCartData }) => {
   const [star, setStar] = useState(0);
   const [addToBag, setAddToBag] = useState('ADD TO BAG');
 
+  // add useEffect
+
+ useEffect(() => {
+  setSizeSelection('');
+  setQuantitySelection(1);
+  setQuantityOption('');
+  setPurchaseDisabled(true);
+  setAddToBag('ADD TO BAG');
+ }, [data.product_id])
+
   /* Managing duplicated data from API */
   let skusData = Object.values(data.results[stylesIndex].skus);
   let productSizes = [];

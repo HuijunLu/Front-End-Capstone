@@ -7,6 +7,7 @@ import QAMockData from '../__QAtest__/QAMockData.js';
 
 
 
+
 describe('Individual question is rendered as expected', () => {
 
 
@@ -26,5 +27,41 @@ describe('Individual question is rendered as expected', () => {
     fireEvent.click(linkElement);
     expect(linkElement).toBeInTheDocument('Yes (5)')
   });
+
+  it('should open add answer model after click' , () => {
+    render(<Question question={QAMockData.questions.results[0]}/>);
+    const linkElement = screen.getByText('Add Answer');
+    fireEvent.click(linkElement);
+    expect(screen.getByText('Submit your Answer')).toBeInTheDocument()
+  });
+
+  it('should open add answer model after click and model should have close and submit button' , () => {
+    render(<Question question={QAMockData.questions.results[0]}/>);
+    const linkElement = screen.getByText('Add Answer');
+    fireEvent.click(linkElement);
+    expect(screen.getByText('Submit your Answer')).toBeInTheDocument();
+    expect(screen.getByText('Close')).toBeInTheDocument();
+    expect(screen.getByText('Submit')).toBeInTheDocument()
+  });
+
+  it('add answer model should have upload pictures function' , () => {
+    render(<Question question={QAMockData.questions.results[0]}/>);
+    const linkElement = screen.getByText('Add Answer');
+    fireEvent.click(linkElement);
+    expect(screen.getByRole('button', {name: 'Upload Pictures'})).toBeInTheDocument()
+  });
+
+  it('should alert when email input is invalid' , () => {
+    const alertMock = jest.spyOn(global,'alert').mockImplementation();
+    render(<Question question={QAMockData.questions.results[0]}/>);
+    const linkElement = screen.getByText('Add Answer');
+    fireEvent.click(linkElement);
+    const inputElement = screen.getByPlaceholderText('Example: jackson11@gmail.com')
+    fireEvent.change(inputElement, {target: {value: '123@'}});
+    fireEvent.click(screen.getByText('Submit'));
+    expect(alertMock).toHaveBeenCalledTimes(1)
+  });
+
+
 
 })
