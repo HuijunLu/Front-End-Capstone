@@ -2,7 +2,7 @@ import React from 'react';
 
 const VerticalThumbnails = ({ photos, currentPhoto, changeIndex }) => {
   return (
-    <ul>
+    <ul className='thumbnailPhotos'>
       {photos.map((thumbnail, index) => {
         if (thumbnail.thumbnail_url !== null) {
           return (<li className="thumbnail-list" key={index}>
