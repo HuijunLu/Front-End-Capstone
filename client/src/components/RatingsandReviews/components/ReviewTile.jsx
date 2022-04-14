@@ -84,11 +84,11 @@ function ReviewTile ({review, reviews}) {
       { helpfulreportclicked === false && reviewreport === 'Report' ?
         <div className="reviewhelpfulreport">
           Helpful?
-          <u onClick={markHelpful}> Yes:({reviewhelpful})</u>  |  <u onClick={reportReview}>{reviewreport}</u>
+          <u data-testid='testHelpfulLink' onClick={markHelpful}> Yes:({reviewhelpful})</u>  |  <u data-testid='reportLinkElement' onClick={reportReview}>{reviewreport}</u>
         </div>
         :
         helpfulreportclicked === true && reviewreport === 'You\'ve reported this review' ?
-        <div className="reviewhelpfulreport">
+        <div className="reviewhelpfulreport" data-testid='reportText' >
           {reviewreport}
         </div>
         :
