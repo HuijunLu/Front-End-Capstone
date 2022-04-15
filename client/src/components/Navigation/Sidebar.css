@@ -51,6 +51,14 @@
   align-items: center;
 }
 
-.minusPlusQuantity:hover {
+.minusPlus:hover {
   cursor: pointer;
+  color: var(--nav-bar-color);
+
+}
+
+.bagDelete:hover {
+  cursor: pointer;
+  color: var(--nav-bar-color);
+
 }

@@ -15,32 +15,26 @@ const Sidebar = (props) => {
   }
 
   const deleteBinClick = async (e) => {
-    // e.preventDefault();
-    // console.log(e.target.id);
     if (e.target.id !== undefined) {
       var newCartData = await props.cartData.filter((cart)=>{
         return Number(cart.style_id) !== Number(e.target.id)
       })
-      // await console.log(newCartData);
       await props.setCartData(newCartData);
     }
   };
 
   const minusOneClick = (e) => {
-    // console.log('etargetid', Number(e.target.id));
     var newCartData = props.cartData.slice();
     if (e.target.id !== undefined) {
       var firstelementtobedeleted = props.cartData.find(element => Number(element.style_id) === Number(e.target.id))
-      // console.log('firstele', firstelementtobedeleted);
       var deleteindex = props.cartData.indexOf(firstelementtobedeleted);
-      if (firstelementtobedeleted.quantity === 1) {
+      if (Number(firstelementtobedeleted.quantity) === 1) {
         newCartData.splice(deleteindex, 1);
-      } else if (firstelementtobedeleted.quantity > 1) {
-        firstelementtobedeleted.quantity = firstelementtobedeleted.quantity - 1
+      } else if (Number(firstelementtobedeleted.quantity) > 1) {
+        firstelementtobedeleted.quantity = Number(firstelementtobedeleted.quantity) - 1
         var tobeinserted = firstelementtobedeleted;
         newCartData.splice(deleteindex, 1, tobeinserted);
       }
-      // console.log('spliced cart', newCartData);
       props.setCartData(newCartData);
     }
 
@@ -52,7 +46,7 @@ const Sidebar = (props) => {
     if (e.target.id !== undefined) {
       var firstElement = props.cartData.find(element => Number(element.style_id) === Number(e.target.id))
       var elementIndex = props.cartData.indexOf(firstElement);
-      firstElement.quantity = firstElement.quantity + 1
+      firstElement.quantity = Number(firstElement.quantity) + 1
       var tobeinserted = firstElement;
       newCartData.splice(elementIndex, 1, tobeinserted);
       props.setCartData(newCartData);
@@ -118,16 +112,13 @@ const Sidebar = (props) => {
 
           }
           <span className = 'minusPlusQuantity'>
-            <AiOutlineMinusSquare  id={item.style_id}  size="18px" onClick={minusOneClick}/>
+            <AiOutlineMinusSquare className='minusPlus'  id={item.style_id}  size="18px" onClick={minusOneClick}/>
             <p>QTY: {item.quantity}</p>
-            <AiOutlinePlusSquare  id={item.style_id} size="18px" onClick={plusOneClick}/>
+            <AiOutlinePlusSquare className='minusPlus' id={item.style_id} size="18px" onClick={plusOneClick}/>
           </span>
-          <span value={item.style_id} id={item.style_id} onClick={deleteBinClick} >
+          <span className='bagDelete' value={item.style_id} id={item.style_id} onClick={deleteBinClick} >
             <RiDeleteBinLine  value={item.style_id} id={item.style_id} size="20px" />
           </span>
-          <p>{item.style_id}</p>
-
-
         </div>
       )}
     </div>
