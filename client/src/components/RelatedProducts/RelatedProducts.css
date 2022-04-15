@@ -119,11 +119,16 @@
 
 
 .RPleft-arrow {
-  left: 175px;
+  left: 275px;
   z-index: 1;
 }
 
 .RPright-arrow {
-  right: 175px;
+  right: 275px;
   z-index: 1;
+}
+.RPStars {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
 }

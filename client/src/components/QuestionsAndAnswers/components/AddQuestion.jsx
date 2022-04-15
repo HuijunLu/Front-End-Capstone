@@ -20,7 +20,6 @@ const AddQuestion = ({ handleOpenModel, product_id, productName, addQuestion }) 
 
     if (verifyEmail(email) && name.length > 0 && questionBody.length > 0) {
       var data = { product_id: product_id, body: questionBody, name: name, email: email };
-      addQuestion(data);
       axios.post('/qa/questions', data)
         .then(res => {
           console.log('Your question is posted: ', res.data)

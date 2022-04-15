@@ -71,7 +71,7 @@ const RelatedProductList = ({ setProductName, relatedProductId, setProduct_id, r
         {listLength !== 0?
           relatedProductData.map((product, count) => {
             return  (count >= currentPhoto || currentPhoto + 3 >= listLength?
-            <RelatedProductCard key={product.id} product={product} setProductName={setProductName}
+            <RelatedProductCard key={product.id} count={count} product={product} setProductName={setProductName}
               setProduct_id={setProduct_id} relatedProductData={relatedProductData} reviewData={reviewData} /> : null);
             })
               : null
