@@ -5,7 +5,7 @@ function MoreReviews ({setReviewsrenderedcount, reviews}) {
 
   return(
     <div>
-       <button id="morereviews" onClick={()=>
+       <button id="morereviews" data-testid='moreReviews'  onClick={()=>
       {setReviewsrenderedcount({reviews}.length);}}>
         MORE REVIEWS
       </button>

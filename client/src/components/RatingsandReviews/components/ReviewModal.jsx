@@ -207,7 +207,7 @@ function ReviewModal ({product_id, productName, productChars, setReviewmodalshow
 
           <div className='newreviewallchars'>
             {productChars.Size ?
-              <div className='newreviewbox'>
+              <div className='newreviewbox' data-testid='reviewmodalradio'>
                 <div className='newreviewcharlabel'>Size * </div>
                 <div className='newreviewchardes'>{size}</div>
                 <div className='newreview size'>
@@ -237,7 +237,7 @@ function ReviewModal ({product_id, productName, productChars, setReviewmodalshow
             }
 
             {productChars.Comfort?
-              <div className='newreviewbox'>
+              <div className='newreviewbox' data-testid='reviewmodalradio'>
                 <div className='newreviewcharlabel'>Comfort * </div>
                 <div className='newreviewchardes'>{comfort}</div>
                 <div className='newreview comfort'>
@@ -267,7 +267,7 @@ function ReviewModal ({product_id, productName, productChars, setReviewmodalshow
             }
 
             {productChars.Quality?
-              <div className='newreviewbox'>
+              <div className='newreviewbox' data-testid='reviewmodalradio'>
                 <div className='newreviewcharlabel'>Quality * </div>
                 <div className='newreviewchardes'>{quality}</div>
                 <div className='newreview quality'>
@@ -297,7 +297,7 @@ function ReviewModal ({product_id, productName, productChars, setReviewmodalshow
             }
 
             {productChars.Width?
-              <div className='newreviewbox'>
+              <div className='newreviewbox' data-testid='reviewmodalradio'>
                 <div className='newreviewcharlabel'>Width * </div>
                 <div className='newreviewchardes'>{width}</div>
                 <div className='newreview width'>
@@ -327,7 +327,7 @@ function ReviewModal ({product_id, productName, productChars, setReviewmodalshow
             }
 
             {productChars.Length?
-              <div className='newreviewbox'>
+              <div className='newreviewbox' data-testid='reviewmodalradio'>
                 <div className='newreviewcharlabel'>Length * </div>
                 <div className='newreviewchardes'>{length}</div>
                 <div className='newreview length'>
@@ -357,7 +357,7 @@ function ReviewModal ({product_id, productName, productChars, setReviewmodalshow
             }
 
             {productChars.Fit?
-              <div className='newreviewbox'>
+              <div className='newreviewbox' data-testid='reviewmodalradio'>
                 <div className='newreviewcharlabel'>Fit * </div>
                 <div className='newreviewchardes'>{fit}</div>
                 <div className='newreview fit'>
