@@ -43,7 +43,7 @@ function ReviewTile ({review, reviews}) {
   };
 
   return(
-    <div className="reviewtile">
+    <div className="reviewtile" data-testid='reviewtile'>
       <div className='reviewtileheader'>
         <div>
           <Star value={review.rating}/>
