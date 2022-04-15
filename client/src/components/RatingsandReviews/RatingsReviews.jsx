@@ -6,7 +6,7 @@ import ReviewList from './components/ReviewList.jsx';
 import MoreReviews from './components/MoreReviews.jsx';
 import AddReview from './components/AddReview.jsx';
 import ReviewModal from './components/ReviewModal.jsx';
-import './RatingsReviews.css'
+import './RatingsReviews.css';
 
 
 function RatingsAndReviews (props) {
