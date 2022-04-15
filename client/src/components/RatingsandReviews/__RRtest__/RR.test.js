@@ -4,12 +4,14 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import axios from 'axios';
 import RRMockData from './RRMockData.js';
-import App from '../../App.jsx';
+import RRMetaMockData from './RRMetaMockData.js';
+
 import RatingsReviews from '../RatingsReviews.jsx';
 import ReviewSort from '../components/ReviewSort.jsx';
 import ReviewList from '../components/ReviewList.jsx';
 import ReviewTile from '../components/ReviewTile.jsx';
 import MoreReviews from '../components/MoreReviews.jsx';
+import RatingBreakdown from '../components/RatingBreakdown.jsx';
 
 jest.mock('axios');
 
@@ -52,7 +54,6 @@ describe('Ratings and Reviews each tile should have expected behavior', () => {
 });
 
 
-
 const mockedSetReviewsRenderCount = jest.fn();
 
 describe('Ratings and Reviews list behaviors', () => {
@@ -68,6 +69,35 @@ describe('Ratings and Reviews list behaviors', () => {
     const moreReviewButton = screen.getByTestId('moreReviews');
     fireEvent.click(moreReviewButton);
     expect(mockedSetReviewsRenderCount).toBeCalled();
+  });
+
+});
+
+const setSelectedstars = jest.fn();
+const setReviewsrenderedcount = jest.fn();
+const setAvgReviewRating = jest.fn();
+
+
+describe('Rating Breakdown should have expected behaviors', () => {
+
+  it('should apply star filter upon clicking on the breakdown', () => {
+    render(<RatingBreakdown metadata={RRMetaMockData} selectedstars={[5]} setSelectedstars={setSelectedstars} setReviewsrenderedcount={setReviewsrenderedcount} setAvgReviewRating={setAvgReviewRating}/>);
+    const fivestarbar = screen.getByTestId('fivestar');
+    fireEvent.click(fivestarbar);
+    screen.debug();
+    const removeallfilters = screen.getByText(/Star filters currently applied:/i)
+    expect(removeallfilters).toBeInTheDocument();
+  });
+
+  it('click on the applied rating breakdown second time will remove that star filter', async () => {
+    render(<RatingBreakdown metadata={RRMetaMockData} selectedstars={[3, 5]} setSelectedstars={setSelectedstars} setReviewsrenderedcount={setReviewsrenderedcount} setAvgReviewRating={setAvgReviewRating}/>);
+    const fivestarbar = screen.getByTestId('fivestar');
+    const threestarbar = screen.getByTestId('threestar');
+    fireEvent.click(fivestarbar);
+    fireEvent.click(threestarbar);
+    // await screen.debug();
+    const removeallfilters = await screen.findByText(/3,5/i)
+    expect(removeallfilters).toBeInTheDocument();
   });
 
 
