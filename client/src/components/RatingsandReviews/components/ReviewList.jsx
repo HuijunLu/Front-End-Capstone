@@ -9,13 +9,13 @@ function ReviewList ({reviews, setReview, reviewsrenderedcount, selectedstars, f
       {selectedstars.length !== 0 ?
         <div>
           {filteredreview.slice(0, reviewsrenderedcount).map((review, index)=>
-            <ReviewTile review={review} key={index} reviews={reviews}/>
+            <ReviewTile data-testid='reviewtile' review={review} key={index} reviews={reviews} />
           )}
         </div>
         :
         <div>
         {reviews.slice(0, reviewsrenderedcount).map((review, index)=>
-          <ReviewTile review={review} key={index} reviews={reviews}/>
+          <ReviewTile data-testid='reviewtile' review={review} key={index} reviews={reviews} />
         )}
       </div>
       }
