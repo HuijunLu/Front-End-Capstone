@@ -8,7 +8,7 @@ import AddQuestion from './components/AddQuestion.jsx';
 import "./components/QuestionAndAnswers.css";
 
 
-const QuestionAndAnswers = ({ product_id, setQuestionLength}) => {
+const QuestionAndAnswers = ({ product_id, productName, setQuestionLength}) => {
 
 
   const [questionList, setQuestionList] = useState([]);
@@ -72,17 +72,17 @@ const QuestionAndAnswers = ({ product_id, setQuestionLength}) => {
       <SearchBar handleSearch={handleSearch} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
 
       {questionList ?
-        <QAList searchTerm={searchTerm} filteredQuestions={filteredQuestions} questionNumber={questionNumber}/> : null}
+        <QAList productName={productName} searchTerm={searchTerm} filteredQuestions={filteredQuestions} questionNumber={questionNumber}/> : null}
       <br></br>
 
       <div className='QABtn'>
         {filteredQuestions.length > 4  && collapseQuestions ?
-          <button className='moreQBtn' onClick={showMoreQuestion} >MORE ANSWERED QUESTIONS</button> : null}
+          <button data-testid = 'moreQBtn' className='moreQBtn' onClick={showMoreQuestion} >MORE ANSWERED QUESTIONS</button> : null}
         {!collapseQuestions ?
           <button className='goBackQ' onClick = {closeQuestions}>GO BACK</button> : null}
         <button className='addQBtn' onClick={handleOpenModel} >ADD A QUESTION</button>
         {showModel ?
-          <AddQuestion  product_id={product_id} handleOpenModel={handleOpenModel} /> : null}
+          <AddQuestion  product_id={product_id} productName={productName} handleOpenModel={handleOpenModel} /> : null}
       </div>
 
     </div>

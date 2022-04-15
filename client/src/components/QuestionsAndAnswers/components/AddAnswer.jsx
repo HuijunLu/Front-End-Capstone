@@ -4,7 +4,7 @@ import ImageModal from '../../SharedComponents/ImageModal.jsx';
 import "./QuestionAndAnswers.css";
 import '../../SharedComponents/ImageModal.css';
 
-const AddAnswer = ({handleOpenModel, question}) => {
+const AddAnswer = ({handleOpenModel, question, productName}) => {
 
   const{question_body, question_id} = question;
 
@@ -84,6 +84,7 @@ const AddAnswer = ({handleOpenModel, question}) => {
       <div className='QAmodel'>
         <form className='QAmodalContent'>
           <h3 className='QAmodelTitle'>Submit your Answer</h3>
+          <h4 className='QAmodelTitle2'>About the {productName}</h4>
 
           <label htmlFor='nickname'>Your Name * : </label>
           <input id = 'name' type='text' name='name' required
@@ -91,7 +92,7 @@ const AddAnswer = ({handleOpenModel, question}) => {
             placeholder='Example: jackson11'
             onChange={handleOnchange}
             value={name} />
-          <p>For privacy reasons, do not use your full name or email address. </p>
+          <p id='modelP'>For privacy reasons, do not use your full name or email address. </p>
 
           <label htmlFor='email'>Your Email * : </label>
           <input id= 'email' type='email' name='email' required
@@ -99,7 +100,7 @@ const AddAnswer = ({handleOpenModel, question}) => {
             placeholder='Example: jackson11@gmail.com'
             onChange={handleOnchange}
             value={email} />
-          <p>For authentication reasons, you will not be emailed.</p>
+          <p id='modelP'>For authentication reasons, you will not be emailed.</p>
 
           <label htmlFor='answer'>Your Answer * : </label>
           <textarea id='answerBody' maxLength='1000' name='answerBody' required
@@ -111,8 +112,8 @@ const AddAnswer = ({handleOpenModel, question}) => {
            <div className='QA-modal-footer'>
             {showUploadBtn && photos.length < 5?
                 <div>
-                  <input type="button" value='Upload Pictures' onClick={(e)=>{setShowUploadBtn(false)}}/>
-                  <p id='note' style={{display: 'inline'}}> (Optional)</p>
+                  <input id='QAmodelUpload'type="button" value='Upload Pictures' onClick={(e)=>{setShowUploadBtn(false)}}/>
+                  <p id='note' style={{display: 'inline', fontSize: 'medium'}}> (Optional)</p>
                 </div>
               : showUploadBtn === false?
                 <div >

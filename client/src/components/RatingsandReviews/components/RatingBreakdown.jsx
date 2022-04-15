@@ -109,7 +109,7 @@ function RatingBreakdown ({metadata, selectedstars, setSelectedstars,  setReview
         {recommendpercentage(metadata.recommended)}% of reviews recommend this product
       </div>
       <br></br>
-      <div className='ratingbreakdownrow' onClick={(e) => applyfilter(e, 5)}>
+      <div data-testid='fivestar' className='ratingbreakdownrow' onClick={(e) => applyfilter(e, 5)}>
         <div className="ratingbreakdown rbdleft">
           <div>5 star</div>
         </div>
@@ -123,7 +123,7 @@ function RatingBreakdown ({metadata, selectedstars, setSelectedstars,  setReview
         </div>
       </div>
 
-      <div className='ratingbreakdownrow' onClick={(e) => applyfilter(e, 4)}>
+      <div data-testid='fourstar' className='ratingbreakdownrow' onClick={(e) => applyfilter(e, 4)}>
         <div className="ratingbreakdown rbdleft">
           <div>4 star</div>
         </div>
@@ -137,7 +137,7 @@ function RatingBreakdown ({metadata, selectedstars, setSelectedstars,  setReview
         </div>
       </div>
 
-      <div className='ratingbreakdownrow' onClick={(e) => applyfilter(e, 3)}>
+      <div data-testid='threestar' className='ratingbreakdownrow' onClick={(e) => applyfilter(e, 3)}>
         <div className="ratingbreakdown rbdleft">
           <div>3 star</div>
         </div>
@@ -151,7 +151,7 @@ function RatingBreakdown ({metadata, selectedstars, setSelectedstars,  setReview
         </div>
       </div>
 
-      <div className='ratingbreakdownrow' onClick={(e) => applyfilter(e, 2)}>
+      <div data-testid='twostar' className='ratingbreakdownrow' onClick={(e) => applyfilter(e, 2)}>
         <div className="ratingbreakdown rbdleft">
           <div>2 star</div>
         </div>
@@ -165,7 +165,7 @@ function RatingBreakdown ({metadata, selectedstars, setSelectedstars,  setReview
         </div>
       </div>
 
-      <div className='ratingbreakdownrow' onClick={(e) => applyfilter(e, 1)}>
+      <div data-testid='onestar' className='ratingbreakdownrow' onClick={(e) => applyfilter(e, 1)}>
         <div className="ratingbreakdown rbdleft">
           <div>1 star</div>
         </div>
@@ -182,7 +182,7 @@ function RatingBreakdown ({metadata, selectedstars, setSelectedstars,  setReview
       {selectedstars.length === 0 ?
         null
         :
-        <div className='StarFilterandRemove'>
+        <div data-testid='starfilterstext' className='StarFilterandRemove'>
           Star filters currently applied: {JSON.stringify(selectedstars.sort())}
           <br></br>
           <u onClick={()=>{setSelectedstars([])}}>Remove all filters</u>
