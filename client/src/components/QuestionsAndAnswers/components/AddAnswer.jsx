@@ -4,7 +4,7 @@ import ImageModal from '../../SharedComponents/ImageModal.jsx';
 import "./QuestionAndAnswers.css";
 import '../../SharedComponents/ImageModal.css';
 
-const AddAnswer = ({handleOpenModel, question}) => {
+const AddAnswer = ({handleOpenModel, question, productName}) => {
 
   const{question_body, question_id} = question;
 
@@ -84,6 +84,7 @@ const AddAnswer = ({handleOpenModel, question}) => {
       <div className='QAmodel'>
         <form className='QAmodalContent'>
           <h3 className='QAmodelTitle'>Submit your Answer</h3>
+          <h4 className='QAmodelTitle2'>About the {productName}</h4>
 
           <label htmlFor='nickname'>Your Name * : </label>
           <input id = 'name' type='text' name='name' required

@@ -5,7 +5,7 @@ import AddAnswer from './AddAnswer.jsx';
 import "./QuestionAndAnswers.css";
 
 
-const Question = ({ question, searchStatus, searchTerm }) => {
+const Question = ({ question, productName, searchStatus, searchTerm }) => {
 
   const [showAnswerModel, setShowAnswerModel] = useState(false);
   const [questionHelpful, setQuestionHelpful] = useState(question.question_helpfulness);
@@ -60,7 +60,7 @@ const Question = ({ question, searchStatus, searchTerm }) => {
         <span className='QAbreak'>|</span>
         <a className='add-answer' onClick={handleOpenModel}>Add Answer</a>
         {showAnswerModel ?
-          <AddAnswer question={question} handleOpenModel={handleOpenModel} /> : null}
+          <AddAnswer question={question} productName={productName} handleOpenModel={handleOpenModel} /> : null}
       </div>
     </div>
   )
