@@ -32,10 +32,29 @@
   padding-top: 275px; /* Location of the content container */
 }
 #name, #email, #answerBody, #questionBody {
-  font-family: 'Poppins', sans-serif
+  font-family: 'Poppins', sans-serif;
+  font-size: medium;
+}
+
+#answerBody {
+  height: 60px;
+}
+
+#modelP {
+  font-size: smaller;
+  margin: 0px 0 20px 0;
+  color: darkgreen;
+
+}
+
+#QAmodelUpload {
+  height: 30px;
+  width: 140px;
+  font-size: medium;
 }
 
 .QAmodelTitle {
+  font-size: x-large;
   display: flex;
   justify-content: center;
 }
@@ -49,7 +68,7 @@
   max-width: 550px; /* Max width where it stops expanding */
   height: 50%; /* Height in proportion to its parent container */
   margin: auto; /* Auto margin according to the element width */
-  padding: 10px;
+  padding: 20px;
   border: 1px solid black;
   border-radius: 20px; /* Optional. Rounds container corners */
   /* modal transition here */
@@ -61,23 +80,24 @@
 }
 
 .QAcloseBtn{
+  width: 70px;
   margin: 1rem 0 1rem 0;
   margin-left: 10%;
-  border-radius: 20px 0 0 20px;
   font-family: 'Poppins', sans-serif;
+  font-size: medium;
+  cursor: pointer;
 }
 
 .QAsubmitBtn{
+  width: 70px;
   margin: 1rem 0 1rem 8rem;
   margin-left: 52%;
-  border-radius: 0 20px 20px 0;
   font-family: 'Poppins', sans-serif;
+  font-size: medium;
+  cursor: pointer;
+
 }
 
-.QAcloseBtn:hover, .QAsubmitBtn:hover{
-  background-color: lightgrey;
-  transition: all ease 0.3s;
-}
 
 .QA-modal-footer {
   padding-top: 15px;
@@ -103,6 +123,7 @@
 }
 
 .QAicon {
+  color: black;
   position: absolute;
   top: 11px;
   left: 8px;
@@ -112,7 +133,7 @@
 .QAsearch {
   border: 1px solid #888C8C;
   border-radius: 8px;
-  height: 30px;
+  height: 35px;
   box-shadow: 0 1px 2px rgb(15 17 17 / 15%) inset;
   width: 75%;
   padding: 2px 23px 2px 30px;
@@ -122,7 +143,7 @@
 }
 
 .QAsearch:hover, .QAsearch:focus {
-  border: 2px solid rgb(144, 170, 203);
+  border: 3px solid val(--button-color);
   background-color: white
 }
 
@@ -147,7 +168,7 @@
 }
 
 .showMoreA, .collapseA{
-  /* color: #d39d7c; */
+  color: var(--nav-bar-color);
   font-weight: 600;
   font-size: 14px;
 }
@@ -260,8 +281,8 @@
 }
 
 .answerPhoto {
-  width:80px;
-  height:70px;
+  width:100px;
+  height:90px;
   object-fit: cover;
   margin-right: 8px;
   border-radius: 5px;
@@ -278,7 +299,7 @@
 
   position: fixed; /* Stay in place */
   z-index: 10; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 200px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -292,7 +313,8 @@
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
+  max-width: 600px;
+  max-height: 700px;
   animation-name: zoom;
   animation-duration: 0.6s;
 }
@@ -304,7 +326,7 @@
 
 .AnswerPhotoCloseBtn {
   position: absolute;
-  /* top: 15px; */
+  top: 100px;
   right: 185px;
   color: #f1f1f1;
   font-size: 40px;

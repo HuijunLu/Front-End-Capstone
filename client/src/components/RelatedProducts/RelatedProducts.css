@@ -47,37 +47,47 @@
 
 
 .RPcard-image {
-  border-radius: 25px 25px 0 0;
+  border-radius: 15px 15px 0 0;
   width: 250px;
-  height: 275px;
+  height: 300px;
   object-fit: cover;
 
 }
 .RPprice{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .RPcard{
   font-family: 'Noto Sans JP', sans-serif;
   box-sizing: border-box;
-  border-radius: 25px;
+  border-radius: 15px;
   display: flex;
   justify-content:space-between;
   flex-direction: column;
   flex-shrink: 0;
   margin: 0px 20px;
-  background-color: var(--RP-card-color);
   text-align: center;
   position: relative;
   overflow-x: hidden;
   cursor: pointer;
+  box-shadow: 0;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+  background-color: #63d471;
+  background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
 
+
+}
+.RPcard:hover{
+  transform: scale(1);
+  box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
 }
 
 .card-container:hover {
   box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   cursor: pointer;
 }
+
 
 
 

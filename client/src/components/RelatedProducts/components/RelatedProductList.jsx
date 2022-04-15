@@ -3,6 +3,7 @@ import axios from 'axios';
 import RelatedProductCard from './RelatedProductCard.jsx';
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
 
+
 const RelatedProductList = ({ setProductName, relatedProductId, setProduct_id, relatedProductData}) => {
 
   const [currentPhoto, setCurrentPhoto] = useState(0);
@@ -10,8 +11,6 @@ const RelatedProductList = ({ setProductName, relatedProductId, setProduct_id, r
   const [reviewData, setReviewData] = useState([]);
   const [scrollable, setScrollable] = useState({ right: true, left: false });
   const [showProduct, setShowProduct] = useState([]);
-
-
 
 
   useEffect(() => {

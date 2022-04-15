@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
+
 const RelatedProductCard = ({ setProduct_id, relatedProductData, reviewData, product, setProductName }) => {
 
   const { id, category, photos, name, default_price, sale_price } = product;
@@ -14,6 +15,7 @@ const RelatedProductCard = ({ setProduct_id, relatedProductData, reviewData, pro
   return (
 
         <div className='RPcard' onClick={handleRelatedCardClick}>
+
           <img className='RPcard-image' alt='related-card' src={(!photos[0].thumbnail_url) ? 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png' : photos[0].thumbnail_url}></img>
           <div className="RPcard__content">
             <div className="card__header-text">
