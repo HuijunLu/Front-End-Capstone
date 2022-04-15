@@ -35,7 +35,7 @@
   min-height: 0;
   min-width: 0;
   margin-right: 8%;
-  margin-left: 8%;
+  margin-left: 12%;
 }
 
 .style-selector {
@@ -224,9 +224,14 @@
 /* ------------------- ImageGallery Component ------------------- */
 .photos {
   display: flex;
-  justify-content: start;
+  /* justify-content: start; */
+  justify-content: right;
   margin-top: 20px;
   position: relative;
+}
+.thumbnailPhotos {
+  width: 2%;
+
 }
 
 .portrait-image {
