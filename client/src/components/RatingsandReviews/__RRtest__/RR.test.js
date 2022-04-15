@@ -19,7 +19,7 @@ import ReviewModal from '../components/ReviewModal.jsx';
 jest.mock('axios');
 
 
-describe('Ratings and Reviews each tile should have expected behavior', () => {
+describe('Ratings and Reviews: each review tile should have expected behavior', () => {
 
   it('user can only put helpful on each tile once, the second click should be disabled', async () => {
 
@@ -54,7 +54,7 @@ describe('Ratings and Reviews each tile should have expected behavior', () => {
 
 const mockedSetReviewsRenderCount = jest.fn();
 
-describe('Ratings and Reviews list behaviors', () => {
+describe('Ratings and Reviews: review list should have expected behaviors', () => {
 
   it('only 2 review tiles show upon opening of website', () => {
     render(<ReviewList reviews={RRMockData.results} reviewsrenderedcount={2} selectedstars={[]}/>);
@@ -76,7 +76,7 @@ const setReviewsrenderedcount = jest.fn();
 const setAvgReviewRating = jest.fn();
 
 
-describe('Rating Breakdown should have expected behaviors', () => {
+describe('Ratings and Reviews: Rating Breakdown should have expected behaviors', () => {
 
   it('should apply star filter upon clicking on the breakdown', () => {
     render(<RatingBreakdown metadata={RRMetaMockData} selectedstars={[5]} setSelectedstars={setSelectedstars} setReviewsrenderedcount={setReviewsrenderedcount} setAvgReviewRating={setAvgReviewRating}/>);
@@ -98,7 +98,7 @@ describe('Rating Breakdown should have expected behaviors', () => {
 
 });
 
-describe('All elements should render on the page', () => {
+describe('Ratings and Reviews: all elements should render on the page', () => {
 
   it('should show the number of reviews on the page', () => {
     render(<ReviewSort reviews = {RRMockData.results}/>);
@@ -127,18 +127,27 @@ describe('All elements should render on the page', () => {
 
   it('Number of product breakdown bars rendered on page will depend on each product', () => {
     render(<ProductBreakdown metadata={RRMetaMockData}/>);
-    screen.debug();
     const productbreakdownbars = screen.getAllByTestId('productbreakdown');
     expect(productbreakdownbars.length).toBe(4);
   });
 
 });
 
-describe('Add Review Modal should have expected behaviors', () => {
+const setReviewmodalshow = jest.fn();
+const setReviews = jest.fn();
 
-  it('should have product name listed under title of this form', () => {
-    render(<ReviewModal/>);
+describe('Ratings and Reviews: add Review Modal should have expected behaviors', () => {
 
+  it('should have product name listed under title of this form', async () => {
+    render(<ReviewModal product_id={RRMetaMockData.product_id} productName="Camo Onesie" productChars={RRMetaMockData.characteristics} setReviewmodalshow={setReviewmodalshow} setReviews={setReviews}/>);
+    const productname = await screen.findByText(/Camo Onesie/i);
+    expect(productname).toBeInTheDocument();
+  });
+
+  it('should render one radio form for each characteristic', async () => {
+    render(<ReviewModal product_id={RRMetaMockData.product_id} productName="Camo Onesie" productChars={RRMetaMockData.characteristics} setReviewmodalshow={setReviewmodalshow} setReviews={setReviews}/>);
+    const radioelements = await screen.findAllByTestId('reviewmodalradio');
+    expect(radioelements.length).toBe(4);
   });
 
 });
