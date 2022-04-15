@@ -28,15 +28,14 @@
   margin-top: 3vh;
   margin-bottom: 3vh;
   padding: 10px;
-  border: 1px solid black;
-  border-radius: 20px; /* Optional. Rounds container corners */
-  /* modal transition here */
+  /* border: 1px solid black; */
+  border-radius: 10px;
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 0.5s
-
+  animation-duration: 0.5s;
+  transition: all linear 0.5s;
 }
 
 .review-modal-header {

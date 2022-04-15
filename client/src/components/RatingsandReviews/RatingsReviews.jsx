@@ -42,6 +42,9 @@ function RatingsAndReviews (props) {
     setFilteredreview(reviews.filter(review => selectedstars.indexOf(review.rating) !== -1));
   }, [selectedstars]);
 
+  useEffect(()=>{setSelectedstars([]);       setReviewsrenderedcount(2);
+  }, [props.product_id]);
+
   return(
     <div className='RRContainer'>
       <h2 id='RatingsandReviews'>RATINGS & REVIEWS</h2>

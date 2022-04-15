@@ -44,3 +44,21 @@
   text-decoration:line-through;
   margin: 0px;
 }
+
+.minusPlusQuantity {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.minusPlus:hover {
+  cursor: pointer;
+  color: var(--nav-bar-color);
+
+}
+
+.bagDelete:hover {
+  cursor: pointer;
+  color: var(--nav-bar-color);
+
+}

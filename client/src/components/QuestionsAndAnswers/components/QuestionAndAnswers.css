@@ -86,7 +86,7 @@
   height: 50%; /* Height in proportion to its parent container */
   margin: auto; /* Auto margin according to the element width */
   padding: 20px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 20px; /* Optional. Rounds container corners */
   /* modal transition here */
   opacity: 1;

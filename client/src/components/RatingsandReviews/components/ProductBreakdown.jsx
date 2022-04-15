@@ -61,7 +61,9 @@ function ProductBreakdown ({metadata}) {
   return(
     <div>
       {size.display?
-        <div className='review-productbreakdown'>
+        <div
+        data-testid='productbreakdown'
+        className='review-productbreakdown'>
           <div className='review-maincharlabel'>Size</div>
           <div className='productbarcontainer'>
             <div className='indicator' style={{width: `${size.value}%`}}>
@@ -81,7 +83,9 @@ function ProductBreakdown ({metadata}) {
       null
       }
       {comfort.display?
-        <div className='review-productbreakdown'>
+        <div
+        data-testid='productbreakdown'
+        className='review-productbreakdown'>
           <div className='review-maincharlabel'>Comfort</div>
           <div className='productbarcontainer'>
             <div className='indicator' style={{width: `${comfort.value}%`}}>
@@ -101,7 +105,9 @@ function ProductBreakdown ({metadata}) {
       null
       }
       {quality.display?
-        <div className='review-productbreakdown'>
+        <div
+        data-testid='productbreakdown'
+        className='review-productbreakdown'>
           <div className='review-maincharlabel'>Quality</div>
           <div className='productbarcontainer'>
             <div className='indicator' style={{width: `${quality.value}%`}}>
@@ -121,7 +127,9 @@ function ProductBreakdown ({metadata}) {
       null
       }
       {width.display?
-        <div className='review-productbreakdown'>
+        <div
+        data-testid='productbreakdown'
+        className='review-productbreakdown'>
           <div className='review-maincharlabel'>Width</div>
           <div className='productbarcontainer'>
             <div className='indicator' style={{width: `${width.value}%`}}>
@@ -141,7 +149,9 @@ function ProductBreakdown ({metadata}) {
       null
       }
       {length.display?
-        <div className='review-productbreakdown'>
+        <div
+        data-testid='productbreakdown'
+        className='review-productbreakdown'>
           <div className='review-maincharlabel'>Length</div>
           <div className='productbarcontainer'>
             <div className='indicator' style={{width: `${length.value}%`}}>
@@ -161,7 +171,9 @@ function ProductBreakdown ({metadata}) {
       null
       }
       {fit.display?
-        <div className='review-productbreakdown'>
+        <div
+        data-testid='productbreakdown'
+        className='review-productbreakdown'>
           <div className='review-maincharlabel'>Fit</div>
           <div className='productbarcontainer'>
             <div className='indicator' style={{width: `${fit.value}%`}}>

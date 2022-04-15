@@ -70,7 +70,7 @@ const App = (props) => {
         }
       </div>
 
-      <Sidebar cartData={cartData} setProduct_id={setProduct_id}/>
+      <Sidebar cartData={cartData} setProduct_id={setProduct_id} setCartData={setCartData}/>
 
     </div>
 
