@@ -12,13 +12,11 @@ import ReviewList from '../components/ReviewList.jsx';
 import ReviewTile from '../components/ReviewTile.jsx';
 import MoreReviews from '../components/MoreReviews.jsx';
 import RatingBreakdown from '../components/RatingBreakdown.jsx';
+import AddReview from '../components/AddReview.jsx';
+import ProductBreakdown from '../components/ProductBreakdown.jsx';
+import ReviewModal from '../components/ReviewModal.jsx';
 
 jest.mock('axios');
-
-it('Ratings and Reviews Sort Option should default to relevant', () => {
-  render(<ReviewSort reviews = {ReviewList}/>);
-  expect(screen.getByText(/relevant/i)).toBeInTheDocument();
-});
 
 
 describe('Ratings and Reviews each tile should have expected behavior', () => {
@@ -84,7 +82,6 @@ describe('Rating Breakdown should have expected behaviors', () => {
     render(<RatingBreakdown metadata={RRMetaMockData} selectedstars={[5]} setSelectedstars={setSelectedstars} setReviewsrenderedcount={setReviewsrenderedcount} setAvgReviewRating={setAvgReviewRating}/>);
     const fivestarbar = screen.getByTestId('fivestar');
     fireEvent.click(fivestarbar);
-    screen.debug();
     const removeallfilters = screen.getByText(/Star filters currently applied:/i)
     expect(removeallfilters).toBeInTheDocument();
   });
@@ -95,11 +92,53 @@ describe('Rating Breakdown should have expected behaviors', () => {
     const threestarbar = screen.getByTestId('threestar');
     fireEvent.click(fivestarbar);
     fireEvent.click(threestarbar);
-    // await screen.debug();
     const removeallfilters = await screen.findByText(/3,5/i)
     expect(removeallfilters).toBeInTheDocument();
   });
 
+});
 
+describe('All elements should render on the page', () => {
+
+  it('should show the number of reviews on the page', () => {
+    render(<ReviewSort reviews = {RRMockData.results}/>);
+    expect(screen.getByText(/18/i)).toBeInTheDocument();
+  });
+
+  it('Ratings and Reviews Sort Option should default to relevant', () => {
+    render(<ReviewSort reviews = {RRMockData.results}/>);
+    expect(screen.getByText(/relevant/i)).toBeInTheDocument();
+  });
+
+  it('More Reviews button should be on the page when first loaded', () => {
+    render(<MoreReviews reviews = {RRMockData.results}/>);
+    expect(screen.getByText(/MORE REVIEWS/i)).toBeInTheDocument();
+  });
+
+  it('Add a Review button should be on the page when first loaded', () => {
+    render(<AddReview/>);
+    expect(screen.getByText(/ADD A REVIEW/i)).toBeInTheDocument();
+  });
+
+  it('recommend percentage should be on the page when first loaded', () => {
+    render(<RatingBreakdown metadata={RRMetaMockData} selectedstars={[]} setSelectedstars={setSelectedstars} setReviewsrenderedcount={setReviewsrenderedcount} setAvgReviewRating={setAvgReviewRating}/>);
+    expect(screen.getByText(/% of reviews recommend this product/i)).toBeInTheDocument();
+  });
+
+  it('Number of product breakdown bars rendered on page will depend on each product', () => {
+    render(<ProductBreakdown metadata={RRMetaMockData}/>);
+    screen.debug();
+    const productbreakdownbars = screen.getAllByTestId('productbreakdown');
+    expect(productbreakdownbars.length).toBe(4);
+  });
+
+});
+
+describe('Add Review Modal should have expected behaviors', () => {
+
+  it('should have product name listed under title of this form', () => {
+    render(<ReviewModal/>);
+
+  });
 
 });
