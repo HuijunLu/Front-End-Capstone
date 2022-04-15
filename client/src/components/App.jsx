@@ -58,7 +58,7 @@ const App = (props) => {
         <hr id="RPDivider"/>
         <RelatedProducts product_id={product_id} setProduct_id={setProduct_id} avgReviewRating={avgReviewRating} setProductName={setProductName} />
         <hr id="QADivider"/>
-        <QuestionAndAnswers product_id={product_id} setQuestionLength={setQuestionLength} />
+        <QuestionAndAnswers product_id={product_id} productName={productName} setQuestionLength={setQuestionLength} />
         <hr id="RRDivider"/>
         <RatingsAndReviews product_id={product_id} productName={productName} setAvgReviewRating={setAvgReviewRating} setReviewLength={setReviewLength} />
         {inView? null :

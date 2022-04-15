@@ -5,7 +5,7 @@ import { BsArrowDownShort, BsArrowUpShort} from "react-icons/bs";
 import "./QuestionAndAnswers.css";
 
 
-const QAEntry = ({ question, searchStatus, searchTerm}) => {
+const QAEntry = ({ question, productName, searchStatus, searchTerm}) => {
 
 
   const [answerNumber, setAnswerNumber] = useState(2);
@@ -42,7 +42,7 @@ const QAEntry = ({ question, searchStatus, searchTerm}) => {
   return (
 
     <div className='QAEntry'>
-      <Question question={question} searchTerm={searchTerm} />
+      <Question question={question} searchTerm={searchTerm} productName={productName}/>
       {sortedAnswerList.slice(0, answerNumber).map(answer => {
         return <Answer key={answer.id} answer={answer} />;
       })}

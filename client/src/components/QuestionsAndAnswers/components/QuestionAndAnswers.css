@@ -32,25 +32,61 @@
   padding-top: 275px; /* Location of the content container */
 }
 #name, #email, #answerBody, #questionBody {
-  font-family: 'Poppins', sans-serif
+  font-family: 'Poppins', sans-serif;
+  font-size: medium;
+  border-radius: 6px;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+}
+
+#answerBody {
+  height: 60px;
+}
+#questionBody {
+  height: 80px;
+}
+
+#modelP {
+  font-size: smaller;
+  margin: 0px 0 20px 0;
+  color: darkslateblue;
+  font-weight: 500;
+}
+
+#QAmodelUpload {
+  margin-top: 10px;
+  height: 30px;
+  width: 130px;
+  font-size: medium;
+  border-radius: 6px;
 }
 
 .QAmodelTitle {
+  font-size: x-large;
   display: flex;
   justify-content: center;
+  margin-bottom:10px;
+}
+
+.QAmodelTitle2 {
+  font-size: large;
+  display: flex;
+  justify-content: center;
+
 }
 
 .QAmodalContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: white;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
   width: 50%; /* Width in proportion to its parent container*/
   max-width: 550px; /* Max width where it stops expanding */
   height: 50%; /* Height in proportion to its parent container */
   margin: auto; /* Auto margin according to the element width */
-  padding: 10px;
-  border: 1px solid black;
+  padding: 20px;
+  /* border: 1px solid black; */
   border-radius: 20px; /* Optional. Rounds container corners */
   /* modal transition here */
   opacity: 1;
@@ -61,23 +97,37 @@
 }
 
 .QAcloseBtn{
+  width: 70px;
   margin: 1rem 0 1rem 0;
   margin-left: 10%;
-  border-radius: 20px 0 0 20px;
   font-family: 'Poppins', sans-serif;
+  font-size: medium;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 .QAsubmitBtn{
+  width: 70px;
   margin: 1rem 0 1rem 8rem;
   margin-left: 52%;
-  border-radius: 0 20px 20px 0;
   font-family: 'Poppins', sans-serif;
+  font-size: medium;
+  cursor: pointer;
+  border-radius: 6px;
 }
+.embedPhotoBtn{
+  font-family: 'Poppins', sans-serif;
+  font-size: medium;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-left: 10px;
 
-.QAcloseBtn:hover, .QAsubmitBtn:hover{
-  background-color: lightgrey;
+}
+.QAcloseBtn:hover, .QAsubmitBtn:hover, #QAmodelUpload:hover, .embedPhotoBtn:hover{
+  background-color: #c3c9c9;
   transition: all ease 0.3s;
 }
+
 
 .QA-modal-footer {
   padding-top: 15px;
@@ -85,8 +135,14 @@
 }
 
 .QAaddPhotoModel {
+  font-family: 'Poppins';
+  font-size: medium;
+  border-radius: 6px;
+  height: 25px;
   width: 80%;
   margin-right: 3px;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 .AnswerNewPhotos {
   display: inline-flex;
@@ -103,6 +159,7 @@
 }
 
 .QAicon {
+  color: black;
   position: absolute;
   top: 11px;
   left: 8px;
@@ -112,7 +169,7 @@
 .QAsearch {
   border: 1px solid #888C8C;
   border-radius: 8px;
-  height: 30px;
+  height: 35px;
   box-shadow: 0 1px 2px rgb(15 17 17 / 15%) inset;
   width: 75%;
   padding: 2px 23px 2px 30px;
@@ -122,7 +179,7 @@
 }
 
 .QAsearch:hover, .QAsearch:focus {
-  border: 2px solid rgb(144, 170, 203);
+  border: 3px solid val(--button-color);
   background-color: white
 }
 
@@ -147,7 +204,7 @@
 }
 
 .showMoreA, .collapseA{
-  /* color: #d39d7c; */
+  color: var(--nav-bar-color);
   font-weight: 600;
   font-size: 14px;
 }
@@ -260,8 +317,8 @@
 }
 
 .answerPhoto {
-  width:80px;
-  height:70px;
+  width:100px;
+  height:90px;
   object-fit: cover;
   margin-right: 8px;
   border-radius: 5px;
@@ -278,7 +335,7 @@
 
   position: fixed; /* Stay in place */
   z-index: 10; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 200px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -292,7 +349,8 @@
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
+  max-width: 600px;
+  max-height: 700px;
   animation-name: zoom;
   animation-duration: 0.6s;
 }
@@ -304,7 +362,7 @@
 
 .AnswerPhotoCloseBtn {
   position: absolute;
-  /* top: 15px; */
+  top: 100px;
   right: 185px;
   color: #f1f1f1;
   font-size: 40px;

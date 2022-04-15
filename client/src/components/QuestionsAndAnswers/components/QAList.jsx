@@ -4,7 +4,7 @@ import "./QuestionAndAnswers.css";
 
 
 
-const QAList = ({ filteredQuestions, questionNumber,searchTerm }) => {
+const QAList = ({productName, filteredQuestions, questionNumber,searchTerm }) => {
 
   return (
 
@@ -12,7 +12,7 @@ const QAList = ({ filteredQuestions, questionNumber,searchTerm }) => {
 
       {
         (filteredQuestions.slice(0, questionNumber)).map((question) => (
-          <QAEntry key={question.question_id} question={question} searchTerm={searchTerm}/>
+          <QAEntry key={question.question_id} question={question} searchTerm={searchTerm} productName={productName}/>
         ))
       }
 
