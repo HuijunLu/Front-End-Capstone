@@ -32,6 +32,12 @@ Product Overview displays a primary product with product information:
 * Product descriptions, slogans, features, and pricing
 * Size and quantity available
 
+**Ratings and Reviews**
+![](DemoGif/RatingReviewsMain.gif)
+
+**Write New Review **
+![](DemoGif/NewReviewModal.gif)
+
 Installation and Setup
 ---
 To download a copy of this project to your local machine:
