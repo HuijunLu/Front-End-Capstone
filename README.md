@@ -43,15 +43,15 @@ Installation and Setup
 To download a copy of this project to your local machine:
 `$ git clone https://github.com/RFE2202-FEC-Zion-Narrows/FEC-Project.git`
 
-Acquire a github personal access token to acquire access to the API. 
-
-Insert token into `example.config.js` and rename file to `config.js`
-
-`$ npm install`
-`$ npm run dev:react`
-`$ npm run start`
+Acquire a github personal access token to acquire access to the API. Insert token into `example.config.js` and rename file to `config.js`
 
 Runs the app in the development mode. 
+
+```sh
+$ npm install
+$ npm run dev:react
+$ npm run start
+```
 
 Open [http://localhost:3000](http://localhost:3000/) to view it in the browser.
 
