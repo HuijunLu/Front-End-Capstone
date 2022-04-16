@@ -1,10 +1,10 @@
 # FEC-Project
 
-##Overview
+Overview
 ---
 F.E.C. is an E-Commerce web application built with React and Express. This project was designed to grow our abilities to work in teams while building, maintaining, and optimizing a fully functioning webpage using React JS. Each team member was responsible for a single component that interacts with and manipulates the application as a whole. This allowed each of us to utilize new technologies while strengthening our understanding of front-end development. 
 
-##Tech/Frameworks
+Tech/Frameworks
 ---
 * [React](https://create-react-app.dev/)
 * [Axios](https://www.npmjs.com/package/axios)
@@ -15,7 +15,7 @@ F.E.C. is an E-Commerce web application built with React and Express. This proje
 * [Jest](https://www.npmjs.com/package/jest)
 * [Webpack](https://www.npmjs.com/package/webpack)
 
-##Demo
+Demo
 ---
 **Main Product Overview & Cart Menu**
 ![Product Overview + Sidebar cart menu](https://drive.google.com/file/d/1Q3i8H1ctkA2jXccmVhso0NR96EecVENi/view?usp=sharing)
@@ -27,7 +27,7 @@ Product Overview displays a primary product with product information:
 * Product descriptions, slogans, features, and pricing
 * Size and quantity available
 
-##Installation and Setup
+Installation and Setup
 ---
 To download a copy of this project to your local machine:
 `$ git clone https://github.com/RFE2202-FEC-Zion-Narrows/FEC-Project.git`
@@ -46,9 +46,9 @@ Open [http://localhost:3000](http://localhost:3000/) to view it in the browser
 
 ##Contributors
 ---
-*Sabrina Gortz - Product Overview
+* Sabrina Gortz - Product Overview
   * https://github.com/sgortz
-*Hailee Lu - Related Products, Questions and Answers 
+* Hailee Lu - Related Products, Questions and Answers 
   * https://github.com/HuijunLu
-*Katy Feng - Ratings and Reviews, Navigation bar, Shopping Cart Sidebar 
+* Katy Feng - Ratings and Reviews, Navigation bar, Shopping Cart Sidebar 
   * https://github.com/katyfsy
