@@ -41,7 +41,7 @@ const ImageGallery = ({ photos }) => {
       <HiOutlineArrowSmRight
         className="right-arrow"
         onClick={nextPhoto} />
-      <div className="horizontal-crousel">
+      <div className="horizontal-carousel">
         {photos.photos.map((photo, index) => {
           return (
             <div
