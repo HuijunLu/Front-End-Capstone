@@ -23,7 +23,7 @@ Demo
 
 **Main Product Overview & Cart Menu**
 
-(https://drive.google.com/file/d/1Q3i8H1ctkA2jXccmVhso0NR96EecVENi/view?usp=sharing)
+![](DemoGif/ProductOverviewCartMenu.gif)
 
 Product Overview displays a primary product with product information:
 
