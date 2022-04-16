@@ -9,7 +9,6 @@ function MoreReviews ({setReviewsrenderedcount, reviews}) {
       {setReviewsrenderedcount({reviews}.length);}}>
         MORE REVIEWS
       </button>
-      {/* <input type="button" id="morereviews" value="More Reviews" onClick={(e)=>{e.preventDefault();setReviewsrenderedcount({reviews}.length)}}/> */}
     </div>
   )
 
