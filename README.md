@@ -18,7 +18,8 @@ Tech/Frameworks
 Demo
 ---
 **Main Product Overview & Cart Menu**
-![Product Overview + Sidebar cart menu](https://drive.google.com/file/d/1Q3i8H1ctkA2jXccmVhso0NR96EecVENi/view?usp=sharing)
+
+(https://drive.google.com/file/d/1Q3i8H1ctkA2jXccmVhso0NR96EecVENi/view?usp=sharing)
 
 Product Overview displays a primary product with product information:
 
@@ -44,11 +45,11 @@ Runs the app in the development mode.
 
 Open [http://localhost:3000](http://localhost:3000/) to view it in the browser.
 
-##Contributors
+Contributors
 ---
 * Sabrina Gortz - Product Overview
-  * https://github.com/sgortz
+ * https://github.com/sgortz
 * Hailee Lu - Related Products, Questions and Answers 
-  * https://github.com/HuijunLu
+ * https://github.com/HuijunLu
 * Katy Feng - Ratings and Reviews, Navigation bar, Shopping Cart Sidebar 
-  * https://github.com/katyfsy
+ * https://github.com/katyfsy
