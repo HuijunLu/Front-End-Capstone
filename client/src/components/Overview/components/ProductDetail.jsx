@@ -7,7 +7,7 @@ const ProductDetail = ({ data, stylesIndex, avgReviewRating }) => {
   } else if (data[1].results[stylesIndex].sale_price === null) {
     return (
       <>
-        <p className="product-name">{data[0].name}</p>
+        <h2 className="product-name">{data[0].name}</h2>
         <Star value={avgReviewRating} />
         <p className="product-price">${data[1].results[stylesIndex].original_price}</p>
       </>

@@ -18,12 +18,12 @@ Tech/Frameworks
 Demo
 ---
 **Theme Toggle: Light & Dark Themes**
-![](DemoGif/PageOverview.gif)
 
+![](DemoGif/PageOverview.gif)
 
 **Main Product Overview & Cart Menu**
 
-(https://drive.google.com/file/d/1Q3i8H1ctkA2jXccmVhso0NR96EecVENi/view?usp=sharing)
+![](DemoGif/ProductOverviewCartMenu.gif)
 
 Product Overview displays a primary product with product information:
 
@@ -33,33 +33,49 @@ Product Overview displays a primary product with product information:
 * Size and quantity available
 
 **Ratings and Reviews**
+
 ![](DemoGif/RatingReviewsMain.gif)
 
-**Write New Review **
+Ratings and Reviews displays dynamically rendered user reviews for the selected product:
+
+* Average Rating represented by number and stars 
+* Filterable rating breakdown section
+* Product breakdown section
+* Sort review options by relevant, helpful, or newest
+* User can mark helpful or report a review
+
+**Write New Review**
+
 ![](DemoGif/NewReviewModal.gif)
+
+User can add new review for the selected product: 
+
+* Dynamic form subcomponents rendering based on selected product
+* Client-side form Input validations
+* Upload Image Options
 
 Installation and Setup
 ---
 To download a copy of this project to your local machine:
 `$ git clone https://github.com/RFE2202-FEC-Zion-Narrows/FEC-Project.git`
 
-Acquire a github personal access token to acquire access to the API. 
-
-Insert token into `example.config.js` and rename file to `config.js`
-
-`$ npm install`
-`$ npm run dev:react`
-`$ npm run start`
+Acquire a github personal access token to acquire access to the API. Insert token into `example.config.js` and rename file to `config.js`
 
 Runs the app in the development mode. 
+
+```sh
+$ npm install
+$ npm run dev:react
+$ npm run start
+```
 
 Open [http://localhost:3000](http://localhost:3000/) to view it in the browser.
 
 Contributors
 ---
 * Sabrina Gortz - Product Overview
- * https://github.com/sgortz
+    * https://github.com/sgortz
 * Hailee Lu - Related Products, Questions and Answers 
- * https://github.com/HuijunLu
+    * https://github.com/HuijunLu
 * Katy Feng - Ratings and Reviews, Navigation bar, Shopping Cart Sidebar 
- * https://github.com/katyfsy
+    * https://github.com/katyfsy
