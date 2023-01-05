@@ -75,7 +75,7 @@ Contributors
 ---
 * Sabrina Gortz - Product Overview
     * https://github.com/sgortz
-* Hailee Lu - Related Products, Questions and Answers 
+* Huijun Lu - Related Products, Questions and Answers 
     * https://github.com/HuijunLu
 * Katy Feng - Ratings and Reviews, Navigation bar, Shopping Cart Sidebar 
     * https://github.com/katyfsy
