@@ -1,8 +1,8 @@
-# FEC-Project
+# Zion
 
 Overview
 ---
-F.E.C. is an E-Commerce web application built with React and Express. This project was designed to grow our abilities to work in teams while building, maintaining, and optimizing a fully functioning webpage using React JS. Each team member was responsible for a single component that interacts with and manipulates the application as a whole. This allowed each of us to utilize new technologies while strengthening our understanding of front-end development. 
+Zion is an E-Commerce web application built with React and Node.js. This project was designed to grow our abilities to work in teams while building, maintaining, and optimizing a fully functioning webpage using React JS. Each team member was responsible for a single component that interacts with and manipulates the application as a whole. This allowed each of us to utilize new technologies while strengthening our understanding of front-end development. 
 
 Tech/Frameworks
 ---
