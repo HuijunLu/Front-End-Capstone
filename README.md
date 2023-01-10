@@ -35,11 +35,23 @@ Product Overview displays a primary product with product information:
 **Questions and Answers**
 
 ![](DemoGif/q&a.gif)
+
 Questions and Answers dynamically renders users questions and answers related to the selected product:
 
-* a search bar allows users to search for specific terms 
+* a search bar allows users to search for specific terms
 * a list of questions and answers displayed in an expanding and collapsing accordion
 * user can create a new question/answer for the product
+
+
+**Related Products**
+
+![](DemoGif/relatedProducts.gif)
+
+Related Products are dynamically rendered based on the product currently being viewed:
+
+* a list of product cards displayed in a carousel fashion scrolling horizontally.
+* each product card is clickable and contains basic product info
+
 
 **Ratings and Reviews**
 
