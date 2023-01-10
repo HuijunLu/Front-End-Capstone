@@ -81,14 +81,11 @@
   justify-content: center;
   background-color: #b8c6db;
   background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
-  width: 50%; /* Width in proportion to its parent container*/
-  max-width: 550px; /* Max width where it stops expanding */
-  height: 50%; /* Height in proportion to its parent container */
-  margin: auto; /* Auto margin according to the element width */
+  width: 50%;
+  max-width: 550px;
+  margin: auto;
   padding: 20px;
-  /* border: 1px solid black; */
-  border-radius: 20px; /* Optional. Rounds container corners */
-  /* modal transition here */
+  border-radius: 20px;
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
@@ -260,9 +257,6 @@
   font-weight: 700;
 }
 
-/* .ABody, .questionBody{
-  font-family: 'Mulish', sans-serif;
-} */
 
 .Answer {
   margin-top: 8px;
@@ -333,16 +327,16 @@
 /* answer model basic css */
 .AnswerPhotoModel {
 
-  position: fixed; /* Stay in place */
-  z-index: 10; /* Sit on top */
-  padding-top: 200px; /* Location of the box */
+  position: fixed;
+  z-index: 10;
+  padding-top: 200px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
 }
 
 .answerPhotoFZ {

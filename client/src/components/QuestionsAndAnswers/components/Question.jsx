@@ -48,7 +48,6 @@ const Question = ({ question, productName, searchStatus, searchTerm }) => {
 
     <div className='questionContainer'>
       <div className='QAinlineLeft'>
-        {/* <span >Q: {question.question_body} </span> */}
         <MakeTitle titleText={question.question_body} searchStatus={searchStatus} searchTerm={searchTerm} />
       </div>
       <div className='QAinlineRight'>
