@@ -2,7 +2,7 @@
 
 Overview
 ---
-Zion is an E-Commerce web application built with React and Node.js. This project was designed to grow our abilities to work in teams while building, maintaining, and optimizing a fully functioning webpage using React JS. Each team member was responsible for a single component that interacts with and manipulates the application as a whole. This allowed each of us to utilize new technologies while strengthening our understanding of front-end development. 
+Zion is an E-Commerce web application built with React and Node.js. This project was designed to grow our abilities to work in teams while building, maintaining, and optimizing a fully functioning webpage using React JS. Each team member was responsible for a single component that interacts with and manipulates the application as a whole. This allowed each of us to utilize new technologies while strengthening our understanding of front-end development.
 
 Tech/Frameworks
 ---
@@ -32,13 +32,22 @@ Product Overview displays a primary product with product information:
 * Product descriptions, slogans, features, and pricing
 * Size and quantity available
 
+**Questions and Answers**
+
+![](DemoGif/q&a.gif)
+Questions and Answers dynamically renders users questions and answers related to the selected product:
+
+* a search bar allows users to search for specific terms 
+* a list of questions and answers displayed in an expanding and collapsing accordion
+* user can create a new question/answer for the product
+
 **Ratings and Reviews**
 
 ![](DemoGif/RatingReviewsMain.gif)
 
 Ratings and Reviews displays dynamically rendered user reviews for the selected product:
 
-* Average Rating represented by number and stars 
+* Average Rating represented by number and stars
 * Filterable rating breakdown section
 * Product breakdown section
 * Sort review options by relevant, helpful, or newest
@@ -48,7 +57,7 @@ Ratings and Reviews displays dynamically rendered user reviews for the selected 
 
 ![](DemoGif/NewReviewModal.gif)
 
-User can add new review for the selected product: 
+User can add new review for the selected product:
 
 * Dynamic form subcomponents rendering based on selected product
 * Client-side form Input validations
@@ -61,7 +70,7 @@ To download a copy of this project to your local machine:
 
 Acquire a github personal access token to acquire access to the API. Insert token into `example.config.js` and rename file to `config.js`
 
-Runs the app in the development mode. 
+Runs the app in the development mode.
 
 ```sh
 $ npm install
@@ -75,7 +84,7 @@ Contributors
 ---
 * Sabrina Gortz - Product Overview
     * https://github.com/sgortz
-* Huijun Lu - Related Products, Questions and Answers 
+* Huijun Lu - Related Products, Questions and Answers
     * https://github.com/HuijunLu
-* Katy Feng - Ratings and Reviews, Navigation bar, Shopping Cart Sidebar 
+* Katy Feng - Ratings and Reviews, Navigation bar, Shopping Cart Sidebar
     * https://github.com/katyfsy

@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "FEC project for Hack Reactor",
   "main": "server/index.js",
-  "homepage": "http://HuijunLu.github.io/Zion-E-commerce",
   "jest": {
     "testEnvironment": "jsdom",
     "moduleNameMapper": {
@@ -27,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/RFE2202-FEC-Zion-Narrows/FEC-Project/issues"
   },
-  "homepage": "https://github.com/RFE2202-FEC-Zion-Narrows/FEC-Project#readme",
+  "homepage": "http://HuijunLu.github.io/Zion-E-commerce",
   "dependencies": {
     "axios": "^0.26.1",
     "bootstrap": "^5.1.3",
